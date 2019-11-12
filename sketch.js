@@ -22,7 +22,12 @@ var coordinates;
 function preload() {
   position = getCurrentPosition();
   console.log(position); //i'm here!!
+
   pin = loadImage("./assets/pin.png"); //pointer
+
+  flag = loadImage("./assets/flag.png");
+
+
 
 
   cursor(CROSS)
@@ -46,6 +51,21 @@ function draw() {
   // noStroke()
   // fill("red")
   image(pin, coordinates.x, coordinates.y, 120, 110)
+
+
+  //Great Pyramid of Giza
+  var pyramid = myMap.latLngToPixel(29.584503, 31.080369)
+    image(flag, pyramid.x - 5, pyramid.y - 5, 90, 90)
+    imageMode(CENTER)
+  	fill('black');
+  	text('Great Pyramid of Giza', pyramid.x + 40, pyramid.y);
+
+    //Hanging Gardens of Babylon
+    var garden = myMap.latLngToPixel(32.5355, 44.4275)
+    image(flag, garden.x - 5, garden.y - 5, 90, 90)
+    imageMode(CENTER)
+  	fill('black');
+  	text('Hanging Gardens of Babylon', garden.x + 40, garden.y);
 
 
 }
