@@ -54,39 +54,53 @@ function draw() {
 
 
   //Great Pyramid of Giza
-  var pyramid = myMap.latLngToPixel(29.584503, 31.080369)
-    image(flag, pyramid.x - 5, pyramid.y - 5, 90, 90)
+  var pyramid = myMap.latLngToPixel(29.944503, 31.140369)
+    image(flag, pyramid.x, pyramid.y, 90, 90)
     imageMode(CENTER)
   	fill('black');
   	text('Great Pyramid of Giza', pyramid.x + 40, pyramid.y);
 
     //Hanging Gardens of Babylon
     var garden = myMap.latLngToPixel(32.5355, 44.4275)
-    image(flag, garden.x - 5, garden.y - 5, 90, 90)
+    image(flag, garden.x, garden.y, 90, 90)
     imageMode(CENTER)
   	fill('black');
   	text('Hanging Gardens of Babylon', garden.x + 40, garden.y);
 
     //Temple of Artemis at Ephesus
-    var temple = myMap.latLngToPixel(37.5659, 27.2150)
-    image(flag, temple.x - 5, temple.y - 5, 90, 90);
+    var temple = myMap.latLngToPixel(37.5659, 27.2150);
+    image(flag, temple.x, temple.y , 90, 90);
     imageMode(CENTER);
   	fill('black');
   	text('Temple of Artemis at Ephesus', temple.x + 40, temple.y);
 
     //Statue of Zeus at Olympia
     var statue = myMap.latLngToPixel(37.38163, 21.3748);
-    image(flag, statue.x - 5, statue.y - 5, 90, 90);
+    image(flag, statue.x, statue.y, 90, 90);
     imageMode(CENTER);
     fill('black');
     text('Statue of Zeus at Olympia', statue.x + 40, statue.y);
 
     //Mausoleum at Halicarnassus
     var mausoleum = myMap.latLngToPixel(37.0379, 27.4241);
-    image(flag, mausoleum .x - 5, mausoleum .y - 5, 90, 90);
+    image(flag, mausoleum.x, mausoleum.y, 90, 90);
     imageMode(CENTER);
     fill('black');
     text('Mausoleum at Halicarnassus', mausoleum.x + 40, mausoleum.y);
+
+    //Colossus of Rhodes
+    var colossus = myMap.latLngToPixel(36.2704, 28.1340);
+    image(flag, colossus.x, colossus.y, 90, 90);
+    imageMode(CENTER);
+    fill('black');
+    text('Colossus of Rhodes', colossus.x + 40, colossus.y);
+
+    //Lighthouse of Alexandria
+    var light = myMap.latLngToPixel(31.1250, 29.5308);
+    image(flag, light.x, light.y, 90, 90);
+    imageMode(CENTER);
+    fill('black');
+    text('Lighthouse of Alexandria', light.x + 40, light.y);
 
 
 }
