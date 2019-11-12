@@ -67,5 +67,26 @@ function draw() {
   	fill('black');
   	text('Hanging Gardens of Babylon', garden.x + 40, garden.y);
 
+    //Temple of Artemis at Ephesus
+    var temple = myMap.latLngToPixel(37.5659, 27.2150)
+    image(flag, temple.x - 5, temple.y - 5, 90, 90);
+    imageMode(CENTER);
+  	fill('black');
+  	text('Temple of Artemis at Ephesus', temple.x + 40, temple.y);
+
+    //Statue of Zeus at Olympia
+    var statue = myMap.latLngToPixel(37.38163, 21.3748);
+    image(flag, statue.x - 5, statue.y - 5, 90, 90);
+    imageMode(CENTER);
+    fill('black');
+    text('Statue of Zeus at Olympia', statue.x + 40, statue.y);
+
+    //Mausoleum at Halicarnassus
+    var mausoleum = myMap.latLngToPixel(37.0379, 27.4241);
+    image(flag, mausoleum .x - 5, mausoleum .y - 5, 90, 90);
+    imageMode(CENTER);
+    fill('black');
+    text('Mausoleum at Halicarnassus', mausoleum.x + 40, mausoleum.y);
+
 
 }
