@@ -24,9 +24,11 @@ function preload() {
   console.log(position); //i'm here!!
 
   pin = loadImage("./assets/pin.png"); //pointer
-
   flag = loadImage("./assets/flag.png");
   pushpin = loadImage("./assets/pushpin.png");
+
+  giza = loadImage("./assets/giza.png");
+  zeus = loadImage("./assets/zeus.png");
 
 
 
@@ -63,16 +65,17 @@ function draw() {
 
   fill('black');
   textFont('Alegreya');
-  textSize(15);
-  text('YOU!', coordinates.x + 20, coordinates.y - 20);
+  textSize(25);
+  text('YOU!', coordinates.x + 20, coordinates.y - 10);
 
   stroke("beige") //text stroke
 
 
   //Great Pyramid of Giza
   var pyramid = myMap.latLngToPixel(29.944503, 31.140369)
+    image(giza, pyramid.x -50, pyramid.y+20, 120, 70)
     image(pushpin, pyramid.x, pyramid.y, 70, 70)
-    
+
   	fill('black');
     textFont('Alegreya');
     textSize(15);
@@ -97,7 +100,8 @@ function draw() {
   	text('Temple of Artemis at Ephesus', temple.x + 40, temple.y);
 
     //Statue of Zeus at Olympia
-    var statue = myMap.latLngToPixel(37.38163, 21.3748);
+    var statue = myMap.latLngToPixel(37.6385388,21.6298566);
+    image(zeus, statue.x-30, statue.y, 70, 120);
     image(pushpin, statue.x, statue.y, 70, 70);
 
     fill('black');
