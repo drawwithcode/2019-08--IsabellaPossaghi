@@ -10,7 +10,7 @@ var mappa = new Mappa('MapboxGL',
 var options = {
   lat: 0,
   lng: 0,
-  zoom: 10,
+  zoom: 7,
   studio: true,
   style: "mapbox://styles/snowdin16/ck2uwvo9007kq1co6mephjjhg"
 }
@@ -36,11 +36,6 @@ function preload() {
   hali = loadImage("./assets/halicarnassus.png");
   rodi = loadImage("./assets/rodi.png");
   alexandria = loadImage("./assets/alexandria.png");
-
-
-
-
-  cursor(CROSS)
 }
 
 function setup() {
@@ -71,7 +66,7 @@ function draw() {
   textFont('Alegreya');
   textSize(25);
   stroke("beige") //text stroke
-  text('Start from your location and go explore', 120, 180);
+  text('Start from your location and go explore!', 120, 180);
 
 
   //user location
