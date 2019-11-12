@@ -3,6 +3,7 @@ var canvas;
 
 var position;
 
+//loading map from mapbox
 var mappa = new Mappa('MapboxGL',
   'pk.eyJ1Ijoic25vd2RpbjE2IiwiYSI6ImNrMm4yeDF1NTBtZWEzaW41bndlcDZtazQifQ.qaidFM19qHeTtXx0ClItmg');
 
@@ -16,7 +17,7 @@ var options = {
 }
 
 
-var coordinates;
+ var coordinates;
 
 
 function preload() {
@@ -51,6 +52,7 @@ function setup() {
 
 function draw() {
   clear();
+  strokeWeight(5);
 
   //title
   fill('black');
@@ -72,17 +74,15 @@ function draw() {
   //user location
   coordinates = myMap.latLngToPixel(position.latitude, position.longitude);
   imageMode(CORNER)
-  image(pin, coordinates.x, coordinates.y, 120, 110)
-  noStroke()
-
-
+  image(pin, coordinates.x, coordinates.y, 120, 110);
   fill('black');
   textFont('Alegreya');
   textSize(25);
   text('YOU!', coordinates.x + 20, coordinates.y - 10);
-
   stroke("beige") //text stroke
 
+
+  //THE 7 WONDERS
 
   //Great Pyramid of Giza
   var pyramid = myMap.latLngToPixel(29.944503, 31.140369)
@@ -126,7 +126,7 @@ function draw() {
 
   //Mausoleum at Halicarnassus
   var mausoleum = myMap.latLngToPixel(37.0377878, 27.4240785);
-  image(hali, mausoleum.x - 30, mausoleum.y, 70, 130);
+  image(hali, mausoleum.x - 30, mausoleum.y, 90, 130);
   image(pushpin, mausoleum.x, mausoleum.y, 70, 70);
 
   fill('black');
@@ -136,7 +136,7 @@ function draw() {
 
   //Colossus of Rhodes
   var colossus = myMap.latLngToPixel(36.451316, 28.2261151);
-  image(rodi, colossus.x - 30, colossus.y, 70, 120);
+  image(rodi, colossus.x - 30, colossus.y, 70, 140);
   image(pushpin, colossus.x, colossus.y, 70, 70);
 
   fill('black');
