@@ -28,7 +28,12 @@ function preload() {
   pushpin = loadImage("./assets/pushpin.png");
 
   giza = loadImage("./assets/giza.png");
+  babylon = loadImage("./assets/babylon.png");
+  artemis = loadImage("./assets/artemis.png");
   zeus = loadImage("./assets/zeus.png");
+  hali = loadImage("./assets/halicarnassus.png");
+  rodi = loadImage("./assets/rodi.png");
+  alexandria = loadImage("./assets/alexandria.png");
 
 
 
@@ -73,7 +78,7 @@ function draw() {
 
   //Great Pyramid of Giza
   var pyramid = myMap.latLngToPixel(29.944503, 31.140369)
-    image(giza, pyramid.x -50, pyramid.y+20, 120, 70)
+    image(giza, pyramid.x -50, pyramid.y+20, 140, 90)
     image(pushpin, pyramid.x, pyramid.y, 70, 70)
 
   	fill('black');
@@ -82,8 +87,9 @@ function draw() {
   	text('Great Pyramid of Giza', pyramid.x + 40, pyramid.y);
 
     //Hanging Gardens of Babylon
-    var garden = myMap.latLngToPixel(32.5355, 44.4275)
-    image(pushpin, garden.x, garden.y, 70, 70)
+    var garden = myMap.latLngToPixel(32.5355, 44.4275);
+    image(babylon, garden.x-50, garden.y+20, 120, 70);
+    image(pushpin, garden.x, garden.y, 70, 70);
 
   	fill('black');
     textFont('Alegreya');
@@ -91,7 +97,8 @@ function draw() {
   	text('Hanging Gardens of Babylon', garden.x + 40, garden.y);
 
     //Temple of Artemis at Ephesus
-    var temple = myMap.latLngToPixel(37.5659, 27.2150);
+    var temple = myMap.latLngToPixel(37.9494454,27.3639686);
+    image(artemis, temple.x-60, temple.y+20, 130, 90);
     image(pushpin, temple.x, temple.y , 70, 70);
 
   	fill('black');
@@ -110,7 +117,8 @@ function draw() {
     text('Statue of Zeus at Olympia', statue.x + 40, statue.y);
 
     //Mausoleum at Halicarnassus
-    var mausoleum = myMap.latLngToPixel(37.0379, 27.4241);
+    var mausoleum = myMap.latLngToPixel(37.0377878,27.4240785);
+    image(hali, mausoleum.x-30, mausoleum.y, 70, 130);
     image(pushpin, mausoleum.x, mausoleum.y, 70, 70);
 
     fill('black');
@@ -119,7 +127,8 @@ function draw() {
     text('Mausoleum at Halicarnassus', mausoleum.x + 40, mausoleum.y);
 
     //Colossus of Rhodes
-    var colossus = myMap.latLngToPixel(36.2704, 28.1340);
+    var colossus = myMap.latLngToPixel(36.451316,28.2261151);
+    image(rodi, colossus.x-30, colossus.y, 70, 120);
     image(pushpin, colossus.x, colossus.y, 70, 70);
 
     fill('black');
@@ -129,6 +138,7 @@ function draw() {
 
     //Lighthouse of Alexandria
     var light = myMap.latLngToPixel(31.2145675,29.8916889);
+    image(alexandria, light.x-40, light.y, 100, 120);
     image(pushpin, light.x, light.y, 70, 70);
 
     fill('black');
