@@ -26,6 +26,7 @@ function preload() {
   pin = loadImage("./assets/pin.png"); //pointer
 
   flag = loadImage("./assets/flag.png");
+  pushpin = loadImage("./assets/pushpin.png");
 
 
 
@@ -46,70 +47,95 @@ function setup() {
 
 function draw() {
   clear();
+
+    //title
+    fill('black');
+  	textFont('Alegreya');
+    textSize(40);
+    stroke("beige") //text stroke
+    text('Seven Wonders of the Ancient World', 40, 40);
+
   coordinates = myMap.latLngToPixel(position.latitude, position.longitude);
-  // ellipse(coordinates.x, coordinates.y, 20);
-  // noStroke()
-  // fill("red")
+  imageMode(CORNER)
   image(pin, coordinates.x, coordinates.y, 120, 110)
+  noStroke()
+
+
+  fill('black');
+  textFont('Alegreya');
+  textSize(15);
+  text('YOU!', coordinates.x + 20, coordinates.y - 20);
 
   stroke("beige") //text stroke
 
 
   //Great Pyramid of Giza
   var pyramid = myMap.latLngToPixel(29.944503, 31.140369)
-    image(flag, pyramid.x, pyramid.y, 90, 90)
-    imageMode(CENTER)
+    image(pushpin, pyramid.x, pyramid.y, 70, 70)
+    
   	fill('black');
     textFont('Alegreya');
+    textSize(15);
   	text('Great Pyramid of Giza', pyramid.x + 40, pyramid.y);
 
     //Hanging Gardens of Babylon
     var garden = myMap.latLngToPixel(32.5355, 44.4275)
-    image(flag, garden.x, garden.y, 90, 90)
-    imageMode(CENTER)
+    image(pushpin, garden.x, garden.y, 70, 70)
+
   	fill('black');
     textFont('Alegreya');
+    textSize(15);
   	text('Hanging Gardens of Babylon', garden.x + 40, garden.y);
 
     //Temple of Artemis at Ephesus
     var temple = myMap.latLngToPixel(37.5659, 27.2150);
-    image(flag, temple.x, temple.y , 90, 90);
-    imageMode(CENTER);
+    image(pushpin, temple.x, temple.y , 70, 70);
+
   	fill('black');
     textFont('Alegreya');
+    textSize(15);
   	text('Temple of Artemis at Ephesus', temple.x + 40, temple.y);
 
     //Statue of Zeus at Olympia
     var statue = myMap.latLngToPixel(37.38163, 21.3748);
-    image(flag, statue.x, statue.y, 90, 90);
-    imageMode(CENTER);
+    image(pushpin, statue.x, statue.y, 70, 70);
+
     fill('black');
     textFont('Alegreya');
+    textSize(15);
     text('Statue of Zeus at Olympia', statue.x + 40, statue.y);
 
     //Mausoleum at Halicarnassus
     var mausoleum = myMap.latLngToPixel(37.0379, 27.4241);
-    image(flag, mausoleum.x, mausoleum.y, 90, 90);
-    imageMode(CENTER);
+    image(pushpin, mausoleum.x, mausoleum.y, 70, 70);
+
     fill('black');
     textFont('Alegreya');
+    textSize(15);
     text('Mausoleum at Halicarnassus', mausoleum.x + 40, mausoleum.y);
 
     //Colossus of Rhodes
     var colossus = myMap.latLngToPixel(36.2704, 28.1340);
-    image(flag, colossus.x, colossus.y, 90, 90);
-    imageMode(CENTER);
+    image(pushpin, colossus.x, colossus.y, 70, 70);
+
     fill('black');
     textFont('Alegreya');
+    textSize(15);
     text('Colossus of Rhodes', colossus.x + 40, colossus.y);
 
     //Lighthouse of Alexandria
-    var light = myMap.latLngToPixel(31.2168129,29.885175);
-    image(flag, light.x, light.y, 90, 90);
-    imageMode(CENTER);
+    var light = myMap.latLngToPixel(31.2145675,29.8916889);
+    image(pushpin, light.x, light.y, 70, 70);
+
     fill('black');
     textFont('Alegreya');
+    textSize(15);
     text('Lighthouse of Alexandria', light.x + 40, light.y);
+
+
+
+
+
 
 
 }
