@@ -207,6 +207,15 @@ function draw() {
   stroke("beige") //text stroke
   text('Colossus of Rhodes', colossus.x + 40, colossus.y);
 
+  //connecting line Rhodes
+  var rhodesLat = 36.451316;
+  var rhodesLon = 28.2261151;
+  stroke("SteelBlue")
+  strokeWeight(1)
+  var distRhodes = calcGeoDistance(position.latitude, position.longitude, rhodesLat, rhodesLon, "km");
+  var pointRhodes = myMap.latLngToPixel(rhodesLat, rhodesLon);
+  line(coordinates.x, coordinates.y, pointRhodes.x, pointRhodes.y);
+
   //Lighthouse of Alexandria
   var light = myMap.latLngToPixel(31.2145675, 29.8916889);
   image(alexandria, light.x - 40, light.y, 100, 120);
@@ -218,5 +227,14 @@ function draw() {
   strokeWeight(5);
   stroke("beige") //text stroke
   text('Lighthouse of Alexandria', light.x + 40, light.y);
+
+  //connecting line Alexandria
+  var alexandriaLat = 31.2145675;
+  var alexandriaLon = 29.8916889;
+  stroke("SteelBlue")
+  strokeWeight(1)
+  var distAlexandria = calcGeoDistance(position.latitude, position.longitude, alexandriaLat, alexandriaLon, "km");
+  var pointAlexandria = myMap.latLngToPixel(alexandriaLat, alexandriaLon);
+  line(coordinates.x, coordinates.y, pointAlexandria.x, pointAlexandria.y);
 
 }
