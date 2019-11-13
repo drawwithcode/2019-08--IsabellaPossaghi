@@ -113,6 +113,11 @@ function draw() {
   var pointGiza = myMap.latLngToPixel(gizaLat, gizaLon);
   line(coordinates.x, coordinates.y, pointGiza.x, pointGiza.y);
 
+  //distance number Giza
+  textFont('Alegreya');
+  textSize(18);
+  text('Distrance from Great Pyramid of Giza:  ' + Math.round(distGiza) + 'km', 40, 600);
+
   //Hanging Gardens of Babylon
   var garden = myMap.latLngToPixel(32.5355, 44.4275);
   image(babylon, garden.x - 50, garden.y + 20, 120, 70);
@@ -133,6 +138,11 @@ function draw() {
   var distBabylon = calcGeoDistance(position.latitude, position.longitude, babylonLat, babylonLon, "km");
   var pointBabylon = myMap.latLngToPixel(babylonLat, babylonLon);
   line(coordinates.x, coordinates.y, pointBabylon.x, pointBabylon.y);
+
+  //distance number Babylon
+  textFont('Alegreya');
+  textSize(18);
+  text('Distrance from Hanging Gardens of Babylon:  ' + Math.round(distBabylon) + 'km', 40, 620);
 
   //Temple of Artemis at Ephesus
   var temple = myMap.latLngToPixel(37.9494454, 27.3639686);
@@ -155,6 +165,11 @@ function draw() {
   var pointEphesus = myMap.latLngToPixel(ephesusLat, ephesusLon);
   line(coordinates.x, coordinates.y, pointEphesus.x, pointEphesus.y);
 
+  //distance number Ephesus
+  textFont('Alegreya');
+  textSize(18);
+  text('Distrance from Temple of Artemis at Ephesus:  ' + Math.round(distEphesus) + 'km', 40, 640);
+
   //Statue of Zeus at Olympia
   var statue = myMap.latLngToPixel(37.6385388, 21.6298566);
   image(zeus, statue.x - 30, statue.y, 70, 120);
@@ -175,6 +190,11 @@ function draw() {
   var distOlympia = calcGeoDistance(position.latitude, position.longitude, olympiaLat, olympiaLon, "km");
   var pointOlympia = myMap.latLngToPixel(olympiaLat, olympiaLon);
   line(coordinates.x, coordinates.y, pointOlympia.x, pointOlympia.y);
+
+  //distance number Olympia
+  textFont('Alegreya');
+  textSize(18);
+  text('Distrance from Statue of Zeus at Olympia:  ' + Math.round(distOlympia) + 'km', 40, 660);
 
   //Mausoleum at Halicarnassus
   var mausoleum = myMap.latLngToPixel(37.0377878, 27.4240785);
@@ -197,6 +217,11 @@ function draw() {
   var pointHalicarnassus = myMap.latLngToPixel(halicarnassusLat, halicarnassusLon);
   line(coordinates.x, coordinates.y, pointHalicarnassus.x, pointHalicarnassus.y);
 
+  //distance number Halicarnassus
+  textFont('Alegreya');
+  textSize(18);
+  text('Distrance from Mausoleum at Halicarnassus:  ' + Math.round(distHalicarnassus) + 'km', 40, 680);
+
   //Colossus of Rhodes
   var colossus = myMap.latLngToPixel(36.451316, 28.2261151);
   image(rodi, colossus.x - 30, colossus.y, 70, 140);
@@ -218,6 +243,11 @@ function draw() {
   var pointRhodes = myMap.latLngToPixel(rhodesLat, rhodesLon);
   line(coordinates.x, coordinates.y, pointRhodes.x, pointRhodes.y);
 
+  //distance number Rhodes
+  textFont('Alegreya');
+  textSize(18);
+  text('Distrance from Colossus of Rhodes:  ' + Math.round(distRhodes) + 'km', 40, 700);
+
   //Lighthouse of Alexandria
   var light = myMap.latLngToPixel(31.2145675, 29.8916889);
   image(alexandria, light.x - 40, light.y, 100, 120);
@@ -238,5 +268,10 @@ function draw() {
   var distAlexandria = calcGeoDistance(position.latitude, position.longitude, alexandriaLat, alexandriaLon, "km");
   var pointAlexandria = myMap.latLngToPixel(alexandriaLat, alexandriaLon);
   line(coordinates.x, coordinates.y, pointAlexandria.x, pointAlexandria.y);
+
+  //distance number Alexandria
+  textFont('Alegreya');
+  textSize(18);
+  text('Distrance from Lighthouse of Alexandria:  ' + Math.round(distAlexandria) + 'km', 40, 720);
 
 }
