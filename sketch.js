@@ -20,6 +20,8 @@ var options = {
  var coordinates;
 
 
+
+
 function preload() {
   position = getCurrentPosition();
   console.log(position); //i'm here!!
@@ -52,7 +54,7 @@ function setup() {
 
 function draw() {
   clear();
-  strokeWeight(5);
+
 
   //title
   fill('black');
@@ -67,6 +69,7 @@ function draw() {
   fill('black');
   textFont('Alegreya');
   textSize(25);
+  strokeWeight(5);
   stroke("beige") //text stroke
   text('Start from your location and go explore!', 120, 180);
 
@@ -78,8 +81,11 @@ function draw() {
   fill('black');
   textFont('Alegreya');
   textSize(25);
+  strokeWeight(5);
   text('YOU!', coordinates.x + 20, coordinates.y - 10);
   stroke("beige") //text stroke
+
+
 
 
   //THE 7 WONDERS
@@ -92,7 +98,18 @@ function draw() {
   fill('black');
   textFont('Alegreya');
   textSize(15);
+  strokeWeight(5);
+  stroke("beige") //text stroke
   text('Great Pyramid of Giza', pyramid.x + 40, pyramid.y);
+
+  //connecting line Giza
+  var gizaLat = 29.944503;
+  var gizaLon = 31.140369;
+  stroke("SteelBlue")
+  strokeWeight(1)
+  var distGiza = calcGeoDistance(position.latitude, position.longitude, gizaLat, gizaLon, "km");
+  var pointGiza = myMap.latLngToPixel(gizaLat, gizaLon);
+  line(coordinates.x, coordinates.y, pointGiza.x, pointGiza.y);
 
   //Hanging Gardens of Babylon
   var garden = myMap.latLngToPixel(32.5355, 44.4275);
@@ -102,7 +119,18 @@ function draw() {
   fill('black');
   textFont('Alegreya');
   textSize(15);
+  strokeWeight(5);
+  stroke("beige") //text stroke
   text('Hanging Gardens of Babylon', garden.x + 40, garden.y);
+
+  //connecting line Babylon
+  var babylonLat = 32.5355;
+  var babylonLon = 44.4275;
+  stroke("SteelBlue")
+  strokeWeight(1)
+  var distBabylon = calcGeoDistance(position.latitude, position.longitude, babylonLat, babylonLon, "km");
+  var pointBabylon = myMap.latLngToPixel(babylonLat, babylonLon);
+  line(coordinates.x, coordinates.y, pointBabylon.x, pointBabylon.y);
 
   //Temple of Artemis at Ephesus
   var temple = myMap.latLngToPixel(37.9494454, 27.3639686);
@@ -112,7 +140,18 @@ function draw() {
   fill('black');
   textFont('Alegreya');
   textSize(15);
+  strokeWeight(5);
+  stroke("beige") //text stroke
   text('Temple of Artemis at Ephesus', temple.x + 40, temple.y);
+
+  //connecting line Ephesus
+  var ephesusLat = 37.9494454;
+  var ephesusLon = 27.3639686;
+  stroke("SteelBlue")
+  strokeWeight(1)
+  var distEphesus = calcGeoDistance(position.latitude, position.longitude, ephesusLat, ephesusLon, "km");
+  var pointEphesus = myMap.latLngToPixel(ephesusLat, ephesusLon);
+  line(coordinates.x, coordinates.y, pointEphesus.x, pointEphesus.y);
 
   //Statue of Zeus at Olympia
   var statue = myMap.latLngToPixel(37.6385388, 21.6298566);
@@ -122,7 +161,18 @@ function draw() {
   fill('black');
   textFont('Alegreya');
   textSize(15);
+  strokeWeight(5);
+  stroke("beige") //text stroke
   text('Statue of Zeus at Olympia', statue.x + 40, statue.y);
+
+  //connecting line Olympia
+  var olympiaLat = 37.6385388;
+  var olympiaLon = 21.6298566;
+  stroke("SteelBlue")
+  strokeWeight(1)
+  var distOlympia = calcGeoDistance(position.latitude, position.longitude, olympiaLat, olympiaLon, "km");
+  var pointOlympia = myMap.latLngToPixel(olympiaLat, olympiaLon);
+  line(coordinates.x, coordinates.y, pointOlympia.x, pointOlympia.y);
 
   //Mausoleum at Halicarnassus
   var mausoleum = myMap.latLngToPixel(37.0377878, 27.4240785);
@@ -132,7 +182,18 @@ function draw() {
   fill('black');
   textFont('Alegreya');
   textSize(15);
+  strokeWeight(5);
+  stroke("beige") //text stroke
   text('Mausoleum at Halicarnassus', mausoleum.x + 40, mausoleum.y);
+
+  //connecting line Halicarnassus
+  var halicarnassusLat = 37.0377878;
+  var halicarnassusLon = 27.4240785;
+  stroke("SteelBlue")
+  strokeWeight(1)
+  var distHalicarnassus = calcGeoDistance(position.latitude, position.longitude, halicarnassusLat, halicarnassusLon, "km");
+  var pointHalicarnassus = myMap.latLngToPixel(halicarnassusLat, halicarnassusLon);
+  line(coordinates.x, coordinates.y, pointHalicarnassus.x, pointHalicarnassus.y);
 
   //Colossus of Rhodes
   var colossus = myMap.latLngToPixel(36.451316, 28.2261151);
@@ -142,6 +203,8 @@ function draw() {
   fill('black');
   textFont('Alegreya');
   textSize(15);
+  strokeWeight(5);
+  stroke("beige") //text stroke
   text('Colossus of Rhodes', colossus.x + 40, colossus.y);
 
   //Lighthouse of Alexandria
@@ -152,6 +215,8 @@ function draw() {
   fill('black');
   textFont('Alegreya');
   textSize(15);
+  strokeWeight(5);
+  stroke("beige") //text stroke
   text('Lighthouse of Alexandria', light.x + 40, light.y);
 
 }
