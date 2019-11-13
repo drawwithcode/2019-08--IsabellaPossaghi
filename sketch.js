@@ -17,10 +17,7 @@ var options = {
 }
 
 
- var coordinates;
-
-
-
+ var coordinates; //mycoordinates
 
 function preload() {
   position = getCurrentPosition();
@@ -55,8 +52,6 @@ function setup() {
 function draw() {
   clear();
 
-
-
   //title
   fill('black');
   textFont('Alegreya');
@@ -88,8 +83,6 @@ function draw() {
   stroke("beige") //text stroke
 
 
-
-
   //THE 7 WONDERS
 
   //Great Pyramid of Giza
@@ -108,7 +101,7 @@ function draw() {
   var gizaLat = 29.944503;
   var gizaLon = 31.140369;
   stroke("SteelBlue")
-  strokeWeight(1)
+  strokeWeight(0.5)
   var distGiza = calcGeoDistance(position.latitude, position.longitude, gizaLat, gizaLon, "km");
   var pointGiza = myMap.latLngToPixel(gizaLat, gizaLon);
   line(coordinates.x, coordinates.y, pointGiza.x, pointGiza.y);
@@ -134,7 +127,7 @@ function draw() {
   var babylonLat = 32.5355;
   var babylonLon = 44.4275;
   stroke("SteelBlue")
-  strokeWeight(1)
+  strokeWeight(0.5)
   var distBabylon = calcGeoDistance(position.latitude, position.longitude, babylonLat, babylonLon, "km");
   var pointBabylon = myMap.latLngToPixel(babylonLat, babylonLon);
   line(coordinates.x, coordinates.y, pointBabylon.x, pointBabylon.y);
@@ -160,7 +153,7 @@ function draw() {
   var ephesusLat = 37.9494454;
   var ephesusLon = 27.3639686;
   stroke("SteelBlue")
-  strokeWeight(1)
+  strokeWeight(0.5)
   var distEphesus = calcGeoDistance(position.latitude, position.longitude, ephesusLat, ephesusLon, "km");
   var pointEphesus = myMap.latLngToPixel(ephesusLat, ephesusLon);
   line(coordinates.x, coordinates.y, pointEphesus.x, pointEphesus.y);
@@ -186,7 +179,7 @@ function draw() {
   var olympiaLat = 37.6385388;
   var olympiaLon = 21.6298566;
   stroke("SteelBlue")
-  strokeWeight(1)
+  strokeWeight(0.5)
   var distOlympia = calcGeoDistance(position.latitude, position.longitude, olympiaLat, olympiaLon, "km");
   var pointOlympia = myMap.latLngToPixel(olympiaLat, olympiaLon);
   line(coordinates.x, coordinates.y, pointOlympia.x, pointOlympia.y);
@@ -212,7 +205,7 @@ function draw() {
   var halicarnassusLat = 37.0377878;
   var halicarnassusLon = 27.4240785;
   stroke("SteelBlue")
-  strokeWeight(1)
+  strokeWeight(0.5)
   var distHalicarnassus = calcGeoDistance(position.latitude, position.longitude, halicarnassusLat, halicarnassusLon, "km");
   var pointHalicarnassus = myMap.latLngToPixel(halicarnassusLat, halicarnassusLon);
   line(coordinates.x, coordinates.y, pointHalicarnassus.x, pointHalicarnassus.y);
@@ -238,7 +231,7 @@ function draw() {
   var rhodesLat = 36.451316;
   var rhodesLon = 28.2261151;
   stroke("SteelBlue")
-  strokeWeight(1)
+  strokeWeight(0.5)
   var distRhodes = calcGeoDistance(position.latitude, position.longitude, rhodesLat, rhodesLon, "km");
   var pointRhodes = myMap.latLngToPixel(rhodesLat, rhodesLon);
   line(coordinates.x, coordinates.y, pointRhodes.x, pointRhodes.y);
@@ -264,7 +257,7 @@ function draw() {
   var alexandriaLat = 31.2145675;
   var alexandriaLon = 29.8916889;
   stroke("SteelBlue")
-  strokeWeight(1)
+  strokeWeight(0.5)
   var distAlexandria = calcGeoDistance(position.latitude, position.longitude, alexandriaLat, alexandriaLon, "km");
   var pointAlexandria = myMap.latLngToPixel(alexandriaLat, alexandriaLon);
   line(coordinates.x, coordinates.y, pointAlexandria.x, pointAlexandria.y);
