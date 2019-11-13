@@ -71,9 +71,10 @@ function draw() {
   text('Start from your location and go explore!', 120, 180);
 
 
-  //user location
+  //user location + hand pin image
   coordinates = myMap.latLngToPixel(position.latitude, position.longitude);
   imageMode(CORNER)
+  ellipse(coordinates.x, coordinates.y, 10, 10);
   image(pin, coordinates.x, coordinates.y, 120, 110);
   fill('black');
   textFont('Alegreya');
