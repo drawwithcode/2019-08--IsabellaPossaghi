@@ -56,10 +56,12 @@ function draw() {
   clear();
 
 
+
   //title
   fill('black');
   textFont('Alegreya');
   textSize(40);
+  strokeWeight(5);
   stroke("beige") //text stroke
   text('Seven Wonders of the Ancient World', 40, 140);
   //compass
