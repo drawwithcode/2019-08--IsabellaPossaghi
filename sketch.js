@@ -69,6 +69,13 @@ function draw() {
   strokeWeight(5);
   stroke("beige") //text stroke
   text('Start from your location and go explore!', 120, 180);
+  //fun fact
+  fill('black');
+  textFont('Alegreya');
+  textSize(15);
+  strokeWeight(1);
+  stroke("Firebrick") //text stroke
+  text("Actually you can't visit anything because they're destroyed (except for Giza's Pyramids)", 40, 780);
 
 
   //user location + hand pin image
@@ -80,8 +87,9 @@ function draw() {
   textFont('Alegreya');
   textSize(25);
   strokeWeight(5);
-  text('YOU!', coordinates.x + 20, coordinates.y - 10);
   stroke("beige") //text stroke
+  text('YOU!', coordinates.x + 20, coordinates.y - 10);
+
 
 
   //THE 7 WONDERS
